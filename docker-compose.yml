@@ -1,0 +1,20 @@
+
+services:
+  postgres:
+    image: postgres:16
+    container_name: fincore-postgres
+    restart: unless-stopped
+
+    environment:
+      POSTGRES_DB: fincore
+      POSTGRES_USER: fincore
+      POSTGRES_PASSWORD: fincore
+
+    ports:
+      - "5432:5432"
+
+    volumes:
+      - fincore-postgres-data:/var/lib/postgresql/data
+
+volumes:
+  fincore-postgres-data:

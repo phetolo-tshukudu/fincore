@@ -1,0 +1,1 @@
+package com.fincore.fincore.budget; import java.math.BigDecimal; import java.time.LocalDate; public record BudgetResponse(Long id,String category,BigDecimal amount,LocalDate month){static BudgetResponse from(Budget b){return new BudgetResponse(b.getId(),b.getCategory(),b.getAmount(),b.getMonth());}}

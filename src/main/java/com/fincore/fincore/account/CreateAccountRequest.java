@@ -1,0 +1,1 @@
+package com.fincore.fincore.account; import java.math.BigDecimal; import jakarta.validation.constraints.*; public record CreateAccountRequest(@NotBlank @Size(max=100) String name,@NotNull AccountType accountType,@NotNull @DecimalMin("0.00") BigDecimal openingBalance){}

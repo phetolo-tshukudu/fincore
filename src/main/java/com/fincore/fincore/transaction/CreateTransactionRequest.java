@@ -1,0 +1,1 @@
+package com.fincore.fincore.transaction; import java.math.BigDecimal; import java.time.Instant; import jakarta.validation.constraints.*; public record CreateTransactionRequest(@NotNull Long accountId,@NotNull @DecimalMin("0.01") BigDecimal amount,@NotBlank @Size(max=80) String category,@Size(max=255) String description,@NotNull TransactionType type,Instant occurredAt){}

@@ -1,0 +1,1 @@
+package com.fincore.fincore.account; import java.math.BigDecimal; import jakarta.validation.constraints.*; public record TransferRequest(@NotNull Long fromAccountId,@NotNull Long toAccountId,@NotNull @DecimalMin(value="0.01") BigDecimal amount){}

@@ -1,0 +1,1 @@
+package com.fincore.fincore.budget; import java.math.BigDecimal; import java.time.YearMonth; import jakarta.validation.constraints.*; public record CreateBudgetRequest(@NotBlank @Size(max=80) String category,@NotNull @DecimalMin("0.01") BigDecimal amount,@NotNull YearMonth month){}
